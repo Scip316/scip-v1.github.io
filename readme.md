@@ -7,7 +7,8 @@ Task
 - make it mobile-friendly
 - buttons maybe too close to each other
 - make it modular | easier to add projects
-- reuse the same colour scheme 
+- reuse the same colour scheme
+- make background stay the same when scrolling
 - remove borders and drop shadow (optional)
 
 
