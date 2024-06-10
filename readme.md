@@ -4,9 +4,12 @@ TODO:
 Add scanning tools (just in case, never know when you need em)
 
 Task
-- create main page with buttons
-- create sub web papges with said buttons
-- decorate those pages with photos
+- make it mobile-friendly
+- buttons maybe too close to each other
+- make it modular | easier to add projects
+- reuse the same colour scheme
+- make background stay the same when scrolling
+- remove borders and drop shadow (optional)
 
 
 Bonus:
