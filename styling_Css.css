@@ -92,8 +92,8 @@ main {
     }
 
     #skills ul, #contact ul {
-        list-style-type: none;
-        padding-left: 20px; 
+        list-style-type: disc;
+        padding-left: 20px; /* Add padding to indent list items */
     }
 
         #skills ul li, #contact ul li {
@@ -125,4 +125,85 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Media Queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .Logo {
+        font-size: 24px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #header_text {
+        max-width: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    main {
+        padding: 20px 5%;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    #skills ul, #contact ul {
+        padding-left: 10px; /* Reduce padding for mobile */
+    }
+
+        #skills ul li, #contact ul li {
+            margin-bottom: 10px;
+        }
+
+    .experience-link {
+        font-size: 0.9em; /* Reduce size for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .Logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+        nav ul li a {
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+
+    #header_text {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    main {
+        padding: 10px 5%;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    #skills ul, #contact ul {
+        padding-left: 5px; /* Further reduce padding for smaller screens */
+    }
+
+        #skills ul li, #contact ul li {
+            margin-bottom: 5px;
+        }
+
+    .experience-link {
+        font-size: 0.8em; /* Further reduce size for smaller screens */
+    }
 }
