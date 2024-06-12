@@ -144,7 +144,7 @@ footer {
 @media only screen and (max-width: 480px) {
     .Nav {
         color: #ABCEFF;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     nav ul {
@@ -157,12 +157,12 @@ footer {
     }
 
     nav ul li a {
-        padding: 2px 3px; /* Adjust padding */
-        font-size: 6px; /* Adjust font size */
+        padding: 2px 4px; /* Adjust padding */
+        font-size: 8px; /* Adjust font size */
     }
 
     nav ul li a:hover {
-        font-size: 10px;
+        font-size: 12px;
     }
 
     #header_text {
