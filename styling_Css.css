@@ -142,18 +142,10 @@ footer {
 
 /* Mobile Styles */
 @media only screen and (max-width: 480px) {
-    nav {
-        padding: 5px 2%; /* Adjust padding */
-    }
-
-    .Logo {
-        font-size: 30px; /* Adjust font size */
-    }
-    
     nav ul {
         flex-wrap: nowrap;
+        overflow-x: auto;
         justify-content: center;
-        white-space: nowrap; /* Prevent wrapping */
     }
 
     nav ul li {
