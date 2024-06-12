@@ -50,8 +50,9 @@ nav ul {
 }
 
 nav ul li {
-    flex: 1 1 auto;
+    flex: 1;
     display: flex;
+    justify-content: center;
 }
 
 nav ul li a {
@@ -134,33 +135,4 @@ main {
 }
 
 footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        justify-content: center;
-    }
-
-    nav ul li {
-        flex: none;
-    }
-
-    nav ul li a {
-        padding: 5px 10px;
-        font-size: 14px;
-    }
-
-    #header_text {
-        position: static;
-        transform: none;
-        max-width: 90%;
-        margin: 20px auto;
-    }
-}
+    background: #
