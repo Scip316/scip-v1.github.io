@@ -46,12 +46,12 @@ nav ul {
     gap: 16px;
     list-style-type: none;
     justify-content: center;
-    flex-wrap: nowrap;
-    overflow-x: auto; /* Allow horizontal scrolling if necessary */
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    flex: none; /* Ensure each item takes only as much space as needed */
+    flex: 1 1 auto;
+    display: flex;
 }
 
 nav ul li a {
@@ -60,11 +60,10 @@ nav ul li a {
     text-decoration: none;
     text-transform: capitalize;
     background-color: #f9004d;
-    padding: 5px 10px; /* Reduce padding to make buttons smaller */
+    padding: 5px 15px;
     border-radius: 20px;
     transition: all 0.4s;
     text-align: center;
-    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 nav ul li a:hover {
@@ -143,18 +142,25 @@ footer {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-    nav {
-        padding: 10px 1%; /* Reduce the padding for the nav bar */
-    }
-
     nav ul {
         flex-wrap: nowrap;
+        overflow-x: auto;
         justify-content: center;
     }
 
     nav ul li {
-        flex: none; /* Ensure each item takes only as much space as needed */
+        flex: none;
     }
 
     nav ul li a {
-        padding: 5px 10px; /* Reduce padding to make buttons smaller */
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+
+    #header_text {
+        position: static;
+        transform: none;
+        max-width: 90%;
+        margin: 20px auto;
+    }
+}
