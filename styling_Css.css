@@ -43,14 +43,16 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 8px;  /* Reduced gap */
+    gap: 16px;
     list-style-type: none;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    white-space: nowrap; /* Prevent wrapping */
 }
 
 nav ul li {
-    flex: none;
+    flex: 1 1 auto;
+    display: flex;
 }
 
 nav ul li a {
@@ -59,15 +61,14 @@ nav ul li a {
     text-decoration: none;
     text-transform: capitalize;
     background-color: #f9004d;
-    padding: 3px 8px;  /* Reduced padding */
+    padding: 5px 15px;
     border-radius: 20px;
     transition: all 0.4s;
     text-align: center;
-    font-size: 12px;  /* Further reduced font size */
 }
 
 nav ul li a:hover {
-    font-size: 14px;
+    font-size: 20px;
     color: white;
 }
 
@@ -95,21 +96,27 @@ main {
     text-transform: uppercase;
 }
 
-#skills, #experience, #contact {
+#skills,
+#experience,
+#contact {
     padding: 50px 0;
     border-bottom: 1px solid #333;
 }
 
-#skills p, #experience p, #contact p {
+#skills p,
+#experience p,
+#contact p {
     margin-bottom: 20px;
 }
 
-#skills ul, #contact ul {
+#skills ul,
+#contact ul {
     list-style-type: none;
-    padding-left: 20px; 
+    padding-left: 20px;
 }
 
-#skills ul li, #contact ul li {
+#skills ul li,
+#contact ul li {
     margin-bottom: 15px;
 }
 
@@ -149,34 +156,11 @@ footer {
     .Logo {
         font-size: 30px; /* Adjust font size */
     }
-    
-    nav ul {
-        flex-wrap: nowrap;
-        justify-content: center;
-        white-space: nowrap; /* Prevent wrapping */
-    }
-
-    nav ul li {
-        flex: none;
-    }
-
-    nav ul li a {
-        padding: 5px 8px; /* Adjust padding */
-        font-size: 12px; /* Adjust font size */
-    }
 
     #header_text {
         position: static;
         transform: none;
         max-width: 90%;
         margin: 20px auto;
-    }
-
-    .section-title {
-        font-size: 1.8em;  /* Reduced section title size */
-    }
-
-    body {
-        font-size: 16px;  /* Slightly reduced body font size */
     }
 }
