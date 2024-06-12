@@ -153,8 +153,12 @@ footer {
     }
 
     nav ul li a {
-        padding: 5px 10px;
-        font-size: 14px;
+        padding: 5px 8px;  /* Reduced padding */
+        font-size: 12px;  /* Reduced font size */
+    }
+
+    .Logo {
+        font-size: 30px;  /* Reduced logo size */
     }
 
     #header_text {
@@ -162,5 +166,13 @@ footer {
         transform: none;
         max-width: 90%;
         margin: 20px auto;
+    }
+
+    .section-title {
+        font-size: 1.8em;  /* Reduced section title size */
+    }
+
+    body {
+        font-size: 16px;  /* Slightly reduced body font size */
     }
 }
