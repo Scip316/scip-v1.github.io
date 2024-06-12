@@ -43,15 +43,14 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 16px;
+    gap: 8px;  /* Reduced gap */
     list-style-type: none;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 nav ul li {
-    flex: 1 1 auto;
-    display: flex;
+    flex: none;
 }
 
 nav ul li a {
@@ -60,14 +59,15 @@ nav ul li a {
     text-decoration: none;
     text-transform: capitalize;
     background-color: #f9004d;
-    padding: 5px 15px;
+    padding: 3px 8px;  /* Reduced padding */
     border-radius: 20px;
     transition: all 0.4s;
     text-align: center;
+    font-size: 12px;  /* Further reduced font size */
 }
 
 nav ul li a:hover {
-    font-size: 20px;
+    font-size: 14px;
     color: white;
 }
 
@@ -153,8 +153,8 @@ footer {
     }
 
     nav ul li a {
-        padding: 5px 8px;  /* Reduced padding */
-        font-size: 12px;  /* Reduced font size */
+        padding: 3px 8px;  /* Further reduced padding */
+        font-size: 10px;  /* Further reduced font size */
     }
 
     .Logo {
