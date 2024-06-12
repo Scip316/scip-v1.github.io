@@ -154,6 +154,7 @@ footer {
 
         nav ul li {
             flex: none;
+            font-size: 14px;
         }
 
             nav ul li a {
@@ -164,10 +165,10 @@ footer {
                 text-transform: capitalize;
                 background-color: #f9004d;
                 padding: 2px 5px; /* Reduced padding */
-                border-radius: 14px;
+                border-radius: 5px;
                 transition: all 0.4s;
                 text-align: center;
-                font-size: 12px; /* Further reduced font size */
+                font-size: 10px; /* Further reduced font size */
             }
 
                 nav ul li a:hover {
@@ -186,6 +187,6 @@ footer {
     }
 
     body {
-        font-size: 14px; /* Slightly reduced body font size */
+        font-size: 17px; /* Slightly reduced body font size */
     }
 }
