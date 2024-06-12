@@ -46,13 +46,12 @@ nav ul {
     gap: 16px;
     list-style-type: none;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Allow horizontal scrolling if necessary */
 }
 
 nav ul li {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+    flex: none; /* Ensure each item takes only as much space as needed */
 }
 
 nav ul li a {
@@ -61,10 +60,11 @@ nav ul li a {
     text-decoration: none;
     text-transform: capitalize;
     background-color: #f9004d;
-    padding: 5px 15px;
+    padding: 5px 10px; /* Reduce padding to make buttons smaller */
     border-radius: 20px;
     transition: all 0.4s;
     text-align: center;
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 nav ul li a:hover {
@@ -135,4 +135,26 @@ main {
 }
 
 footer {
-    background: #
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 1%; /* Reduce the padding for the nav bar */
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        flex: none; /* Ensure each item takes only as much space as needed */
+    }
+
+    nav ul li a {
+        padding: 5px 10px; /* Reduce padding to make buttons smaller */
