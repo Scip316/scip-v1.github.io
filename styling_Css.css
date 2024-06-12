@@ -168,7 +168,7 @@ footer {
                 border-radius: 5px;
                 transition: all 0.4s;
                 text-align: center;
-                font-size: 10px; /* Further reduced font size */
+                font-size: 16px; /* Further reduced font size */
             }
 
                 nav ul li a:hover {
