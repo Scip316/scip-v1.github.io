@@ -141,7 +141,7 @@ footer {
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) {
+@media only screen and (max-width: 480px) {
     nav ul {
         flex-wrap: nowrap;
         overflow-x: auto;
@@ -153,12 +153,8 @@ footer {
     }
 
     nav ul li a {
-        padding: 3px 8px;  /* Further reduced padding */
-        font-size: 10px;  /* Further reduced font size */
-    }
-
-    .Logo {
-        font-size: 30px;  /* Reduced logo size */
+        padding: 5px 8px; /* Adjust padding */
+        font-size: 12px; /* Adjust font size */
     }
 
     #header_text {
