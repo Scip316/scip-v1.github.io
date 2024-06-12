@@ -36,7 +36,7 @@ nav {
     z-index: 1000;
 }
 
-.Logo {
+.Nav {
     color: #ABCEFF;
     font-size: 40px;
 }
@@ -63,11 +63,11 @@ nav ul li a {
     border-radius: 20px;
     transition: all 0.4s;
     text-align: center;
-    font-size: 12px;  /* Further reduced font size */
+    font-size: 20px;  /* Further reduced font size */
 }
 
 nav ul li a:hover {
-    font-size: 14px;
+    font-size: 24px;
     color: white;
 }
 
@@ -142,9 +142,13 @@ footer {
 
 /* Mobile Styles */
 @media only screen and (max-width: 480px) {
+    .Nav {
+        color: #ABCEFF;
+        font-size: 10px;
+    }
+
     nav ul {
         flex-wrap: nowrap;
-        overflow-x: auto;
         justify-content: center;
     }
 
@@ -153,8 +157,12 @@ footer {
     }
 
     nav ul li a {
-        padding: 5px 8px; /* Adjust padding */
-        font-size: 12px; /* Adjust font size */
+        padding: 2px 3px; /* Adjust padding */
+        font-size: 6px; /* Adjust font size */
+    }
+
+    nav ul li a:hover {
+        font-size: 10px;
     }
 
     #header_text {
@@ -169,6 +177,6 @@ footer {
     }
 
     body {
-        font-size: 16px;  /* Slightly reduced body font size */
+        font-size: 14px;  /* Slightly reduced body font size */
     }
 }
