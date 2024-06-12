@@ -43,33 +43,33 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 8px;  /* Reduced gap */
+    gap: 8px; /* Reduced gap */
     list-style-type: none;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-nav ul li {
-    flex: none;
-}
+    nav ul li {
+        flex: none;
+    }
 
-nav ul li a {
-    color: #DEDEDE;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: capitalize;
-    background-color: #f9004d;
-    padding: 3px 8px;  /* Reduced padding */
-    border-radius: 20px;
-    transition: all 0.4s;
-    text-align: center;
-    font-size: 20px;  /* Further reduced font size */
-}
+        nav ul li a {
+            color: #DEDEDE;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: capitalize;
+            background-color: #f9004d;
+            padding: 3px 8px; /* Reduced padding */
+            border-radius: 20px;
+            transition: all 0.4s;
+            text-align: center;
+            font-size: 20px; /* Further reduced font size */
+        }
 
-nav ul li a:hover {
-    font-size: 24px;
-    color: white;
-}
+            nav ul li a:hover {
+                font-size: 24px;
+                color: white;
+            }
 
 /* Header Text Styles */
 #header_text {
@@ -100,18 +100,18 @@ main {
     border-bottom: 1px solid #333;
 }
 
-#skills p, #experience p, #contact p {
-    margin-bottom: 20px;
-}
+    #skills p, #experience p, #contact p {
+        margin-bottom: 20px;
+    }
 
-#skills ul, #contact ul {
-    list-style-type: none;
-    padding-left: 20px; 
-}
+    #skills ul, #contact ul {
+        list-style-type: none;
+        padding-left: 20px;
+    }
 
-#skills ul li, #contact ul li {
-    margin-bottom: 15px;
-}
+        #skills ul li, #contact ul li {
+            margin-bottom: 15px;
+        }
 
 .experience {
     margin-bottom: 40px;
@@ -128,10 +128,10 @@ main {
     margin-top: 10px;
 }
 
-.experience-link:hover {
-    background-color: #f9004d;
-    color: white;
-}
+    .experience-link:hover {
+        background-color: #f9004d;
+        color: white;
+    }
 
 footer {
     background: #333;
@@ -144,7 +144,7 @@ footer {
 @media only screen and (max-width: 480px) {
     .Nav {
         color: #ABCEFF;
-        font-size: 16px;
+        font-size: 20px;
     }
 
     nav ul {
@@ -152,18 +152,28 @@ footer {
         justify-content: center;
     }
 
-    nav ul li {
-        flex: none;
-    }
+        nav ul li {
+            flex: none;
+        }
 
-    nav ul li a {
-        padding: 2px 4px; /* Adjust padding */
-        font-size: 12px; /* Adjust font size */
-    }
+            nav ul li a {
+                /*padding: 2px 4px;*/ /* Adjust padding */
+                /*font-size: 12px;*/ /* Adjust font size */
+                color: #DEDEDE;
+                font-weight: bold;
+                text-decoration: none;
+                text-transform: capitalize;
+                background-color: #f9004d;
+                padding: 3px 8px; /* Reduced padding */
+                border-radius: 20px;
+                transition: all 0.4s;
+                text-align: center;
+                font-size: 20px; /* Further reduced font size */
+            }
 
-    nav ul li a:hover {
-        font-size: 16px;
-    }
+                nav ul li a:hover {
+                    font-size: 24px;
+                }
 
     #header_text {
         position: static;
@@ -173,10 +183,10 @@ footer {
     }
 
     .section-title {
-        font-size: 1.8em;  /* Reduced section title size */
+        font-size: 1.8em; /* Reduced section title size */
     }
 
     body {
-        font-size: 14px;  /* Slightly reduced body font size */
+        font-size: 14px; /* Slightly reduced body font size */
     }
 }
