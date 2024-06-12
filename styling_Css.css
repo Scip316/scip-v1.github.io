@@ -143,7 +143,6 @@ footer {
 /* Mobile Styles */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: row;
         flex-wrap: nowrap;
         overflow-x: auto;
         justify-content: center;
