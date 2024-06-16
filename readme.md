@@ -5,7 +5,7 @@ Add scanning tools (just in case, never know when you need em)
 
 Task
 - make it mobile-friendly
-- buttons maybe too close to each other
+  fix home button | add line to skills | make button link to title
 - make it modular | easier to add projects
 - reuse the same colour scheme
 - make background stay the same when scrolling
