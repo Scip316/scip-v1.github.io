@@ -1,16 +1,18 @@
 URL: https://scip316.github.io/scip-v1.github.io/
 
+-----------------------------------------
 TODO:
-Add scanning tools (just in case, never know when you need em)
 
-Task
-- make it mobile-friendly
-- buttons maybe too close to each other
-- make it modular | easier to add projects
-- reuse the same colour scheme
-- make background stay the same when scrolling
-- remove borders and drop shadow (optional)
+1.Bugs:
+- webpage is curretly not mobile friendly - too big, button does not scale well, etc
+- home button does not work
+- some buttons are not of the same colour scheme
 
+2. Neccessary Features to be implemented:
+- Make project page modular - long term easier to add projects and no need to hard code it as much
+- Find a way to a) Keep the background the same when scrolling | b) change the background as your scroll. this relates to 3.
 
-Bonus:
+3. Best to have:
+- Remove borders and drop shadow
 - add Parallax effect where the project go into view
+- Add pipeline for scanning (sonarcloud)
