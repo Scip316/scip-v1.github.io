@@ -1,7 +1,19 @@
 URL: https://scip316.github.io/scip-v1.github.io/
 
 -----------------------------------------
-TODO:
+
+TODO V2:
+1) Add top left title "Scip web"
+2) Add Project
+3) Add contact details
+4) Fix the box (smoother interface)
+
+
+
+
+
+
+TODO V1 (Decomissioned):
 
 1.Bugs:
 - webpage is curretly not mobile friendly - too big, button does not scale well, etc
