@@ -1,0 +1,175 @@
+/* Global styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* System Theme Detection */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #fff;
+  }
+  .navbar, .contact {
+    background-color: #1f1f1f;
+  }
+}
+
+/* Sticky Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  font-size: 1.2rem; /* Larger font */
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, font-size 0.3s;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s;
+}
+
+.navbar a:hover::before {
+  width: 100%; /* Left to right highlight effect */
+}
+
+.navbar a:hover {
+  color: red;
+}
+
+/* Introduction section with a GIF background */
+.intro {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('images/eating_ramen.png') no-repeat center center/cover; /* Corrected path */
+}
+
+.intro-text {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* Section Separators */
+.section-separator {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 50px 0;
+}
+
+/* Dropdown Sections */
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dropdown-title {
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: center;
+  transition: color 0.3s;
+}
+
+/* Red hover effect */
+.dropdown-title:hover {
+  color: red;
+}
+
+.arrow {
+  font-size: 1.2rem;
+}
+
+/* Accordion content container */
+.dropdown-content {
+  display: none;
+  padding: 10px;
+  border-top: none;
+}
+
+/* Project Container with dynamic columns */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project-box {
+  flex: 1 1 30%; /* Each project takes up 30% width */
+  margin: 10px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.project-box:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Contact section */
+.contact {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.contact a {
+  color: white;
+  margin: 10px;
+  font-size: 1.5rem;
+}
+
+.contact a:hover {
+  color: #ddd;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-whatsapp { background: #25D366; color: white; }
+.fa-telegram { background: #0088cc; color: white; }
+.fa-linkedin { background: #007bb5; color: white; }
+.fa-envelope { background: #d44638; color: white; }
