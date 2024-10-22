@@ -3,10 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="functions.js" defer></script>
+    <title>Portfolio</title>
 </head>
 <body>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="menu-btn">☰ Menu</button>
+        <div class="dropdown-content">
+            <a href="#intro">Home</a>
+            <a href="#work-experience">Work Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <!-- Original Navbar for desktop -->
     <div class="navbar">
         <a href="#intro">Introduction</a>
         <a href="#work-experience">Work Experience</a>
@@ -14,57 +27,53 @@
         <a href="#contact">Contact</a>
     </div>
 
-    <section id="intro" class="intro">
+    <div class="intro" id="intro">
         <div class="intro-text">
-            <h1>Portfolio Welcome </h1>
-            <p>Intro filler!</p>
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your introduction text goes here.</p>
         </div>
-    </section>
+    </div>
 
     <hr class="section-separator">
 
-    <!-- Work Experience Section -->
-    <section id="work-experience" class="section">
-        <h2 class="dropdown-title" onclick="toggleSection('work-content')">
-            Work Experience <span class="arrow">▼</span>
-        </h2>
-        <div id="work-content" class="dropdown-content">
+    <div class="section" id="work-experience">
+        <div class="dropdown-title">
+            Work Experience <span class="arrow">►</span>
+        </div>
+        <div class="dropdown-content">
             <div class="project-container">
-                <div class="project-box">1st Project</div>
-                <div class="project-box">2nd Project</div>
-                <div class="project-box">3rd Project</div>
-                <!-- <div class="project-box">4th Project</div> -->
+                <div class="project-box">Project 1</div>
+                <div class="project-box">Project 2</div>
+                <div class="project-box">Project 3</div>
+                <div class="project-box">Project 4</div>
             </div>
         </div>
-    </section>
+    </div>
 
     <hr class="section-separator">
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <h2 class="dropdown-title" onclick="toggleSection('project-content')">
-            Projects <span class="arrow">▼</span>
-        </h2>
-        <div id="project-content" class="dropdown-content">
+    <div class="section" id="projects">
+        <div class="dropdown-title">
+            Projects <span class="arrow">►</span>
+        </div>
+        <div class="dropdown-content">
             <div class="project-container">
-                <div class="project-box">Project A</div>
-                <div class="project-box">Project B</div>
-                <div class="project-box">Project C</div>
-                <div class="project-box">Project D</div>
+                <div class="project-box">Project 1</div>
+                <div class="project-box">Project 2</div>
+                <div class="project-box">Project 3</div>
+                <div class="project-box">Project 4</div>
             </div>
         </div>
-    </section>
+    </div>
 
     <hr class="section-separator">
 
-    <section id="contact" class="contact">
-        <p>Contact Information:</p>
-        <a href="#"><i class="fa fa-whatsapp"></i> WhatsApp</a>
-        <a href="#"><i class="fa fa-telegram"></i> Telegram</a>
-        <a href="#"><i class="fa fa-linkedin"></i> LinkedIn</a>
-        <a href="#"><i class="fa fa-envelope"></i> Email</a>
-    </section>
-
-    <script src="functions.js"></script>
+    <div class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+        <a href="#"><i class="fa fa-telegram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+    </div>
 </body>
 </html>

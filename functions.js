@@ -1,17 +1,3 @@
-/*function toggleSection(sectionId) {
-  const content = document.getElementById(sectionId);
-  const arrow = content.previousElementSibling.querySelector('.arrow');
-  if (content.style.display === 'none' || content.style.display === '') {
-    content.style.display = 'block';
-    arrow.textContent = '▲';  // Change arrow direction on expand
-  } else {
-    content.style.display = 'none';
-    arrow.textContent = '▼';  // Change arrow direction on collapse
-  }
-} */
-
-
-// Get all dropdown titles
 const dropdownTitles = document.querySelectorAll('.dropdown-title');
 
 // Add click event listeners to each dropdown title
@@ -63,3 +49,15 @@ adjustSizes();
 
 // Adjust sizes on window resize
 window.addEventListener('resize', adjustSizes);
+
+// Add the mobile menu button click event listener
+document.querySelector('.menu-btn').addEventListener('click', function() {
+    const menuContent = document.querySelector('.dropdown-content');
+    
+    // Toggle menu visibility
+    if (menuContent.style.display === 'block') {
+        menuContent.style.display = 'none';
+    } else {
+        menuContent.style.display = 'block';
+    }
+});
