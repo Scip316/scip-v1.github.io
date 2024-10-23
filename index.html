@@ -10,71 +10,80 @@
 <body>
     <!-- Mobile Menu -->
     <div class="mobile-menu">
+        <span class="site-name">My Name</span> <!-- Name on the left -->
         <button class="menu-btn">☰</button> <!-- Hamburger menu on the right -->
         <div class="dropdown-content">
             <a href="#intro">Home</a>
             <a href="#work-experience">Work Experience</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
+            <a href="#certifications">Certifications</a> <!-- New menu item -->
         </div>
     </div>
 
     <!-- Original Navbar for desktop -->
     <div class="navbar">
-        <span class="name">Scip</span> <!-- Added Name on the left -->
         <a href="#intro">Introduction</a>
         <a href="#work-experience">Work Experience</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <a href="#certifications">Certifications</a> <!-- New navbar item -->
     </div>
 
-    <div class="intro" id="intro">
-        <div class="intro-text">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Your introduction text goes here.</p>
-        </div>
-    </div>
-
+    <!-- Other sections remain the same -->
+    
     <hr class="section-separator">
 
-    <div class="section" id="work-experience">
+    <!-- New Certifications section -->
+    <div class="section" id="certifications">
         <div class="dropdown-title">
-            Work Experience <span class="arrow">►</span>
+            Certifications <span class="arrow">►</span>
         </div>
         <div class="dropdown-content">
-            <div class="project-container">
-                <div class="project-box">Project 1</div>
-                <div class="project-box">Project 2</div>
-                <div class="project-box">Project 3</div>
-                <div class="project-box">Project 4</div>
+            <div class="cert-section">
+                <div class="cert-title">
+                    Current (Past 2 years) <span class="arrow">►</span>
+                </div>
+                <div class="cert-table">
+                    <table>
+                        <tr>
+                            <th>Certification</th>
+                            <th>Date Acquired</th>
+                        </tr>
+                        <tr>
+                            <td>Cert 1</td>
+                            <td>Jan 2022</td>
+                        </tr>
+                        <tr>
+                            <td>Cert 2</td>
+                            <td>May 2023</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="cert-section">
+                <div class="cert-title">
+                    Outdated <span class="arrow">►</span>
+                </div>
+                <div class="cert-table">
+                    <table>
+                        <tr>
+                            <th>Certification</th>
+                            <th>Date Acquired</th>
+                        </tr>
+                        <tr>
+                            <td>Cert 3</td>
+                            <td>Feb 2020</td>
+                        </tr>
+                        <tr>
+                            <td>Cert 4</td>
+                            <td>June 2019</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
 
-    <hr class="section-separator">
-
-    <div class="section" id="projects">
-        <div class="dropdown-title">
-            Projects <span class="arrow">►</span>
-        </div>
-        <div class="dropdown-content">
-            <div class="project-container">
-                <div class="project-box">Project 1</div>
-                <div class="project-box">Project 2</div>
-                <div class="project-box">Project 3</div>
-                <div class="project-box">Project 4</div>
-            </div>
-        </div>
-    </div>
-
-    <hr class="section-separator">
-
-    <div class="contact" id="contact">
-        <h2>Contact Me</h2>
-        <a href="#"><i class="fa fa-whatsapp"></i></a>
-        <a href="#"><i class="fa fa-telegram"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-        <a href="#"><i class="fa fa-envelope"></i></a>
-    </div>
 </body>
 </html>
