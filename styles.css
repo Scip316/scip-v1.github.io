@@ -6,7 +6,7 @@ body, html {
     transition: background-color 0.5s, color 0.5s;
 }
 
-/* System Theme Detection */
+/* System Theme */
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #121212;
@@ -30,14 +30,14 @@ body, html {
 }
 
 .navbar-title {
-    color: rgb(92, 82, 236); 
-    margin-right: auto; /* Pushes the links to the center */
-    font-size: 1.5rem; /* font size */
+    color: white;
+    margin-right: auto; /* links to the center */
+    font-size: 1.5rem; /* Adjust font size */
 }
 
 /* Centered Links */
 .navbar-links {
-    flex-grow: 1; /* Allow links to take up available space dynamically */
+    flex-grow: 1; /*  links take up available space */
     display: flex;
     justify-content: center; /* Center links */
 }
@@ -72,13 +72,13 @@ body, html {
     color: red;
 }
 
-/* Introduction section with a GIF background (TO BE USE) */
+/* Intro section with GIF TODO */
 .intro {
     min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('images/eating_ramen.png') no-repeat center center/cover; /* path */
+    background: url('images/eating_ramen.png') no-repeat center center/cover; 
 }
 
 .intro-text {
@@ -101,20 +101,33 @@ body, html {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px; /* Add padding for better spacing */
+    background-color: #f8f8f8; /* Light gray background white theme */
+    color: black; /* Default text color white theme */
+    border-radius: 8px; /* Round the corners */
 }
 
+/* Dark theme styles for sections */
+@media (prefers-color-scheme: dark) {
+    .section {
+        background-color: #1e1e1e; /* Dark background */
+        color: white; /* Text color for dark theme */
+    }
+}
+
+/* Dropdown title styles */
 .dropdown-title {
     text-transform: uppercase;
     padding: 15px;
     font-size: 1.5rem;
     cursor: pointer;
     display: flex;
-    justify-content: flex-start; /* Align to left */
+    justify-content: flex-start; /* Align to the left */
     align-items: center;
     transition: color 0.3s;
 }
 
-/* Red highlight */
+/* Red hover effect */
 .dropdown-title:hover {
     color: red;
 }
@@ -123,14 +136,22 @@ body, html {
     font-size: 1.2rem;
 }
 
-/* Accordion content container */
+/* Accordion content */
 .dropdown-content {
     display: none;
     padding: 10px;
     border-top: none;
+    background-color: #f9f9f9; /* Light background for dropdown */
 }
 
-/* Dynamic Project columns */
+/* Dark theme for dropdown content */
+@media (prefers-color-scheme: dark) {
+    .dropdown-content {
+        background-color: #333333; /* Dark background for dropdowns */
+    }
+}
+
+/* Dynamic container columns */
 .project-container {
     display: flex;
     flex-wrap: wrap;
@@ -138,10 +159,10 @@ body, html {
 }
 
 .project-box {
-    flex: 1 1 30%; /* 30% width for project */
+    flex: 1 1 30%; /* Container 30% width */
     margin: 10px;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Light gray boxes */
     text-align: center;
     transition: background-color 0.3s;
 }
@@ -149,6 +170,53 @@ body, html {
 .project-box:hover {
     background-color: red;
     color: white;
+}
+
+/* Certificate Section */
+.dropdown-content {
+    display: none; /* Hide dropdown by default */
+}
+
+.smaller-dropdown.dropdown-title {
+    font-size: 1.3rem; /* Adjust font - smaller */
+}
+
+.dropdown-title {
+    cursor: pointer;
+    padding: 15px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ccc; /* Border style */
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4; /* Header background color */
+}
+
+/* Dropdown hover effect */
+.dropdown-title:hover {
+    color: red; /* color on hover */
+}
+
+/*  show dropdown content */
+.dropdown-content {
+    padding: 10px;
+    background-color: #f9f9f9; /* Background color for dropdown */
 }
 
 /* Contact section */
@@ -187,7 +255,7 @@ body, html {
 .fa-linkedin { background: #007bb5; color: white; }
 .fa-envelope { background: #d44638; color: white; }
 
-/* New styles for mobile menu */
+/* Style for mobile menu */
 .mobile-menu {
     display: none;
     background-color: grey;
@@ -223,9 +291,9 @@ body, html {
     background-color: darkgrey;
 }
 
-/* Small screens ard 768px (mobile) */
+/* screen < 768px (mobile device) */
 @media screen and (max-width: 768px) {
-    /* Hide original navbar and show mobile menu */
+    /* Hide PC navbar and show mobile menu */
     .navbar {
         display: none;
     }
@@ -239,7 +307,7 @@ body, html {
         text-align: center;
     }
 
-    /* Adjust sections - avoid overlap */
+    /* avoid overlap sections */
     .section {
         margin: 20px 0;
     }
@@ -255,7 +323,7 @@ body, html {
         margin-bottom: 10px;
     }
 
-    /* Contact scaling */
+    /* Contact section scaling */
     .contact {
         padding: 20px;
         font-size: 16px;
