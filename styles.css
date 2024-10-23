@@ -30,9 +30,9 @@ body, html {
 }
 
 .navbar-title {
-    color: white;
+    color: rgb(92, 82, 236); 
     margin-right: auto; /* Pushes the links to the center */
-    font-size: 1.5rem; /* Adjust font size */
+    font-size: 1.5rem; /* font size */
 }
 
 /* Centered Links */
