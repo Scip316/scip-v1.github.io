@@ -1,57 +1,202 @@
-/* Header adjustments */
-.mobile-menu {
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Sticky navbar */
+.navbar {
     display: flex;
-    justify-content: space-between; /* Aligns name left and hamburger right */
+    justify-content: space-between;
     align-items: center;
-    background-color: grey;
+    background-color: #333;
     padding: 10px;
-}
-
-.site-name {
-    font-size: 1.5rem;
-    color: blue; /* Blue color for your name */
-}
-
-.menu-btn {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-/* New styles for certifications */
-.cert-section {
-    padding: 10px;
-}
-
-.cert-title {
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    color: black;
-}
-
-.cert-title:hover {
-    color: red;
-}
-
-.cert-table {
-    display: none;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.cert-table table {
+    position: sticky;
+    top: 0;
     width: 100%;
-    border-collapse: collapse;
+    z-index: 1000;
 }
 
-.cert-table th, .cert-table td {
-    border: 1px solid #ccc;
-    padding: 8px;
+/* Top left Navbar (For name) */
+.nav-left {
+    flex-grow: 1;
+}
+
+.nav-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+}
+
+/* Navbar links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    text-align: center;
+    font-size: larger;
+}
+
+.navbar a:hover {
+    background-color: red;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Introduction section */
+#intro {
+    background-image: url('your-background-image.jpg'); /* Replace with your image or GIF */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#intro h1 {
+    font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.6); /* Darken background for readability */
+    padding: 20px;
+}
+
+/* Work Experience section */
+#work-experience {
+    padding: 40px;
     text-align: left;
 }
 
-.cert-table th {
-    background-color: #f2f2f2;
+#work-experience h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#work-experience .content {
+    display: none;
+    margin-top: 20px;
+}
+
+#work-experience .arrow {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+#work-experience:hover h2 {
+    color: red;
+}
+
+/* Projects section */
+#projects {
+    padding: 40px;
+    text-align: left;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#projects:hover h2 {
+    color: red;
+}
+
+.project-item {
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-item:hover {
+    background-color: red;
+    color: white;
+}
+
+/* Dynamic layout Scaling */
+#projects .project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Sections Seperator --- */
+.separator {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: red;
+}
+
+/* Contact section */
+#contact {
+    padding: 20px;
+    text-align: left;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+#contact .icons {
+    display: flex;
+    gap: 10px;
+}
+
+#contact .icons a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+/* Menu for Mobile */
+.navbar-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #333;
+}
+
+.navbar-mobile a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-mobile a:hover {
+    background-color: red;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Check if mobile */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: flex;
+        width: 100%;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
