@@ -7,35 +7,28 @@
     <script src="functions.js" defer></script>
     <title>Portfolio</title>
 </head>
-<body>
-    <!-- NavBar for Mobile -->
-    <div class="mobile-menu">
-        <button class="menu-btn">☰</button> <!-- Hamburger menu on the right -->
-        <div class="dropdown-content">
-            <div class="nav-left">
-                <span class="nav-name">Scip</span>
-            </div>
-            <a href="#intro">Home</a>
-            <a href="#work-experience">Work Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </div>
-
-    <!-- Navbar for PC -->
-    <div class="navbar">
-        <div class="nav-left">
-            <span class="nav-name">Scip</span>
-        </div>
-        <a href="#intro">Introduction</a>
+<div class="mobile-menu">
+    <h1 class="navbar-title">Scip</h1> <!-- Add your name here -->
+    <button class="menu-btn">☰ Menu</button>
+    <div class="dropdown-content">
+        <a href="#intro">Home</a>
         <a href="#work-experience">Work Experience</a>
         <a href="#projects">Projects</a>
-        <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
     </div>
+</div>
 
-    <!-- Introduction Section TODO -->
+<!-- Navbar PC -->
+<div class="navbar">
+    <h1 class="navbar-title">Scip</h1> <!-- Add your name here -->
+    <div class="navbar-links">
+        <a href="#intro">Home</a>
+        <a href="#work-experience">Work Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</div>
+
     <div class="intro" id="intro">
         <div class="intro-text">
             <h1>Welcome to My Portfolio</h1>
@@ -45,7 +38,6 @@
 
     <hr class="section-separator">
 
-    <!-- Work experience section TODO - Comment out the others except 1 for intern-->
     <div class="section" id="work-experience">
         <div class="dropdown-title">
             Work Experience <span class="arrow">►</span>
@@ -62,7 +54,6 @@
 
     <hr class="section-separator">
 
-    <!-- Projects Section TODO-->
     <div class="section" id="projects">
         <div class="dropdown-title">
             Projects <span class="arrow">►</span>
@@ -79,67 +70,6 @@
 
     <hr class="section-separator">
 
-    <!-- Certifications -->
-    <div class="section" id="certifications">
-        <div class="dropdown-title">
-            Certifications <span class="arrow">►</span>
-        </div>
-        <div class="dropdown-content">
-            <div class="dropdown-title">
-                <!-- Recent Certs -->
-                Current (Past 2 years) <span class="arrow">►</span>
-            </div>
-            <div class="dropdown-content">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Certifications</th>
-                            <th>Date Acquired</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>AWS</td>
-                            <td>April 2024</td>
-                        </tr>
-                        <tr>
-                            <td>RPDH</td>
-                            <td>March 2024</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="dropdown-title">
-                <!-- Old certs (2 Years < ago)
-                Previous <span class="arrow">►</span>
-            </div>
-            <div class="dropdown-content">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Certification</th>
-                            <th>Date Acquired</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>RPDH 1</td>
-                            <td>March 2023</td>
-                        </tr>
-                        <tr>
-                            <td>GPM</td>
-                            <td>April 2022</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <hr class="section-separator">
-
-    <!-- Contact Section (TODO)-->
     <div class="contact" id="contact">
         <h2>Contact Me</h2>
         <a href="#"><i class="fa fa-whatsapp"></i></a>
