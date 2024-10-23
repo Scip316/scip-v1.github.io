@@ -8,82 +8,144 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <!-- Mobile Menu -->
+    <!-- NavBar for Mobile -->
     <div class="mobile-menu">
-        <span class="site-name">My Name</span> <!-- Name on the left -->
         <button class="menu-btn">☰</button> <!-- Hamburger menu on the right -->
         <div class="dropdown-content">
+            <div class="nav-left">
+                <span class="nav-name">Scip</span>
+            </div>
             <a href="#intro">Home</a>
             <a href="#work-experience">Work Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
-            <a href="#certifications">Certifications</a> <!-- New menu item -->
         </div>
     </div>
 
-    <!-- Original Navbar for desktop -->
+    <!-- Navbar for PC -->
     <div class="navbar">
+        <div class="nav-left">
+            <span class="nav-name">Scip</span>
+        </div>
         <a href="#intro">Introduction</a>
         <a href="#work-experience">Work Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
-        <a href="#certifications">Certifications</a> <!-- New navbar item -->
     </div>
 
-    <!-- Other sections remain the same -->
-    
+    <!-- Introduction Section TODO -->
+    <div class="intro" id="intro">
+        <div class="intro-text">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Your introduction text goes here.</p>
+        </div>
+    </div>
+
     <hr class="section-separator">
 
-    <!-- New Certifications section -->
+    <!-- Work experience section TODO - Comment out the others except 1 for intern-->
+    <div class="section" id="work-experience">
+        <div class="dropdown-title">
+            Work Experience <span class="arrow">►</span>
+        </div>
+        <div class="dropdown-content">
+            <div class="project-container">
+                <div class="project-box">Project 1</div>
+                <div class="project-box">Project 2</div>
+                <div class="project-box">Project 3</div>
+                <div class="project-box">Project 4</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-separator">
+
+    <!-- Projects Section TODO-->
+    <div class="section" id="projects">
+        <div class="dropdown-title">
+            Projects <span class="arrow">►</span>
+        </div>
+        <div class="dropdown-content">
+            <div class="project-container">
+                <div class="project-box">Project 1</div>
+                <div class="project-box">Project 2</div>
+                <div class="project-box">Project 3</div>
+                <div class="project-box">Project 4</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-separator">
+
+    <!-- Certifications -->
     <div class="section" id="certifications">
         <div class="dropdown-title">
             Certifications <span class="arrow">►</span>
         </div>
         <div class="dropdown-content">
-            <div class="cert-section">
-                <div class="cert-title">
-                    Current (Past 2 years) <span class="arrow">►</span>
-                </div>
-                <div class="cert-table">
-                    <table>
-                        <tr>
-                            <th>Certification</th>
-                            <th>Date Acquired</th>
-                        </tr>
-                        <tr>
-                            <td>Cert 1</td>
-                            <td>Jan 2022</td>
-                        </tr>
-                        <tr>
-                            <td>Cert 2</td>
-                            <td>May 2023</td>
-                        </tr>
-                    </table>
-                </div>
+            <div class="dropdown-title">
+                <!-- Recent Certs -->
+                Current (Past 2 years) <span class="arrow">►</span>
             </div>
-            <div class="cert-section">
-                <div class="cert-title">
-                    Outdated <span class="arrow">►</span>
-                </div>
-                <div class="cert-table">
-                    <table>
+            <div class="dropdown-content">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Certifications</th>
+                            <th>Date Acquired</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AWS</td>
+                            <td>April 2024</td>
+                        </tr>
+                        <tr>
+                            <td>RPDH</td>
+                            <td>March 2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="dropdown-title">
+                <!-- Old certs (2 Years < ago)
+                Previous <span class="arrow">►</span>
+            </div>
+            <div class="dropdown-content">
+                <table>
+                    <thead>
                         <tr>
                             <th>Certification</th>
                             <th>Date Acquired</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
-                            <td>Cert 3</td>
-                            <td>Feb 2020</td>
+                            <td>RPDH 1</td>
+                            <td>March 2023</td>
                         </tr>
                         <tr>
-                            <td>Cert 4</td>
-                            <td>June 2019</td>
+                            <td>GPM</td>
+                            <td>April 2022</td>
                         </tr>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
+    <hr class="section-separator">
+
+    <!-- Contact Section (TODO)-->
+    <div class="contact" id="contact">
+        <h2>Contact Me</h2>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+        <a href="#"><i class="fa fa-telegram"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+    </div>
 </body>
 </html>
