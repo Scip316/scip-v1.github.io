@@ -1,202 +1,264 @@
-/* General styles */
-body {
+/* Global styles */
+body, html {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
 }
 
-/* Sticky navbar */
+/* System Theme Detection */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121212;
+        color: #fff;
+    }
+    .navbar, .contact {
+        background-color: #1f1f1f;
+    }
+}
+
+/* Sticky Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px;
     position: sticky;
     top: 0;
-    width: 100%;
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
 }
 
-/* Top left Navbar (For name) */
-.nav-left {
-    flex-grow: 1;
-}
-
-.nav-name {
-    font-size: 1.5rem;
-    font-weight: bold;
+.navbar-title {
     color: white;
-    margin-right: 20px;
+    margin-right: auto; /* Pushes the links to the center */
+    font-size: 1.5rem; /* Adjust font size */
 }
 
-/* Navbar links */
+/* Centered Links */
+.navbar-links {
+    flex-grow: 1; /* Allow links to take up available space dynamically */
+    display: flex;
+    justify-content: center; /* Center links */
+}
+
 .navbar a {
     color: white;
-    text-decoration: none;
     padding: 14px 20px;
-    text-align: center;
-    font-size: larger;
+    font-size: 1.2rem; /* Larger font */
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: red;
+    transition: width 0.3s;
+}
+
+.navbar a:hover::before {
+    width: 100%; /* Left to right highlight effect */
 }
 
 .navbar a:hover {
-    background-color: red;
-    color: white;
-    transition: background-color 0.3s ease;
+    color: red;
 }
 
-/* Introduction section */
-#intro {
-    background-image: url('your-background-image.jpg'); /* Replace with your image or GIF */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    height: 60vh;
+/* Introduction section with a GIF background (TO BE USE) */
+.intro {
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: url('images/eating_ramen.png') no-repeat center center/cover; /* path */
+}
+
+.intro-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
     text-align: center;
 }
 
-#intro h1 {
-    font-size: 3rem;
-    background-color: rgba(0, 0, 0, 0.6); /* Darken background for readability */
-    padding: 20px;
+/* Section Separators --- */
+.section-separator {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 50px 0;
 }
 
-/* Work Experience section */
-#work-experience {
-    padding: 40px;
-    text-align: left;
+/* Dropdown Sections */
+.section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-#work-experience h2 {
-    font-size: 2rem;
+.dropdown-title {
     text-transform: uppercase;
-}
-
-#work-experience .content {
-    display: none;
-    margin-top: 20px;
-}
-
-#work-experience .arrow {
-    cursor: pointer;
+    padding: 15px;
     font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start; /* Align to left */
+    align-items: center;
+    transition: color 0.3s;
 }
 
-#work-experience:hover h2 {
+/* Red highlight */
+.dropdown-title:hover {
     color: red;
 }
 
-/* Projects section */
-#projects {
-    padding: 40px;
-    text-align: left;
+.arrow {
+    font-size: 1.2rem;
 }
 
-#projects h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
-#projects:hover h2 {
-    color: red;
-}
-
-.project-item {
+/* Accordion content container */
+.dropdown-content {
+    display: none;
     padding: 10px;
-    transition: background-color 0.3s ease;
+    border-top: none;
 }
 
-.project-item:hover {
+/* Dynamic Project columns */
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-box {
+    flex: 1 1 30%; /* 30% width for project */
+    margin: 10px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.project-box:hover {
     background-color: red;
     color: white;
-}
-
-/* Dynamic layout Scaling */
-#projects .project-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-/* Sections Seperator --- */
-.separator {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 2rem;
-    font-weight: bold;
-    color: red;
 }
 
 /* Contact section */
-#contact {
-    padding: 20px;
-    text-align: left;
+.contact {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
 }
 
-#contact h2 {
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
-#contact .icons {
-    display: flex;
-    gap: 10px;
-}
-
-#contact .icons a {
-    text-decoration: none;
-    color: black;
+.contact a {
+    color: white;
+    margin: 10px;
     font-size: 1.5rem;
 }
 
-/* Menu for Mobile */
-.navbar-mobile {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: #333;
+.contact a:hover {
+    color: #ddd;
 }
 
-.navbar-mobile a {
-    padding: 10px;
-    color: white;
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
     text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
 }
 
-.navbar-mobile a:hover {
-    background-color: red;
+.fa:hover {
+    opacity: 0.7;
 }
 
-.mobile-menu-toggle {
+.fa-whatsapp { background: #25D366; color: white; }
+.fa-telegram { background: #0088cc; color: white; }
+.fa-linkedin { background: #007bb5; color: white; }
+.fa-envelope { background: #d44638; color: white; }
+
+/* New styles for mobile menu */
+.mobile-menu {
     display: none;
-    background-color: #333;
-    color: white;
+    background-color: grey;
     padding: 10px;
+    position: relative;
+}
+
+.mobile-menu .menu-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
     cursor: pointer;
 }
 
-/* Check if mobile */
-@media (max-width: 768px) {
+.mobile-menu .dropdown-content {
+    display: none;
+    background-color: grey;
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+}
+
+.mobile-menu .dropdown-content a {
+    display: block;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.mobile-menu .dropdown-content a:hover {
+    background-color: darkgrey;
+}
+
+/* Small screens ard 768px (mobile) */
+@media screen and (max-width: 768px) {
+    /* Hide original navbar and show mobile menu */
     .navbar {
         display: none;
     }
 
-    .navbar-mobile {
-        display: flex;
+    .mobile-menu {
+        display: block;
+    }
+
+    .intro-text {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    /* Adjust sections - avoid overlap */
+    .section {
+        margin: 20px 0;
+    }
+
+    /* Scale down project boxes */
+    .project-container {
+        display: block;
         width: 100%;
     }
 
-    .mobile-menu-toggle {
-        display: block;
+    .project-box {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
     }
-}
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
+    /* Contact scaling */
+    .contact {
+        padding: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
 }
