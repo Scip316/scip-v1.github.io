@@ -1,45 +1,65 @@
 const dropdownTitles = document.querySelectorAll('.dropdown-title');
 
-// Add listeners to dropdown title
+// dropdown title event listeners
 dropdownTitles.forEach(title => {
-    title.addEventListener('click', function() {
-        const content = this.nextElementSibling; // Get the associated content
+    title.addEventListener('click', function () {
+        // dropdown is certificate section?
+        const isCertificateDropdown = title.classList.contains('certificate-dropdown');
+        const isSmallerDropdown = title.classList.contains('smaller-dropdown');
 
-        // Toggle content display
-        if (content.style.display === 'block') {
-            content.style.display = 'none'; // Hide if already shown
-            this.querySelector('.arrow').textContent = '►'; // Change to right arrow
-        } else {
-            content.style.display = 'block'; // Show the content
-            this.querySelector('.arrow').textContent = '▼'; // Change to down arrow
+        // Close all other dropdowns if not certificate or smaller-dropdown
+        if (!isCertificateDropdown && !isSmallerDropdown) {
+            dropdownTitles.forEach(otherTitle => {
+                if (otherTitle !== title) {
+                    const otherContent = otherTitle.nextElementSibling;
+                    if (otherContent) {
+                        otherContent.style.display = 'none'; // Close other dropdowns
+                        const otherArrow = otherTitle.querySelector('.arrow');
+                        if (otherArrow) otherArrow.textContent = '►';
+                    }
+                }
+            });
+        } else if (isCertificateDropdown) {
+            // If Certificate dropdown, close all non-certificate dropdowns
+            dropdownTitles.forEach(otherTitle => {
+                if (!otherTitle.classList.contains('certificate-dropdown') && !otherTitle.classList.contains('smaller-dropdown')) {
+                    const otherContent = otherTitle.nextElementSibling;
+                    if (otherContent) {
+                        otherContent.style.display = 'none';
+                        const otherArrow = otherTitle.querySelector('.arrow');
+                        if (otherArrow) otherArrow.textContent = '►';
+                    }
+                }
+            });
         }
 
-        // close other sections
-        dropdownTitles.forEach(otherTitle => {
-            if (otherTitle !== this) {
-                otherTitle.nextElementSibling.style.display = 'none'; // Close other sections
-                otherTitle.querySelector('.arrow').textContent = '►'; // Reset arrow
-            }
-        });
+        // Toggle content
+        const content = title.nextElementSibling;
+        const arrow = title.querySelector('.arrow');
+        if (content) {
+            const isContentVisible = content.style.display === 'block';
+            content.style.display = isContentVisible ? 'none' : 'block';
+            arrow.textContent = isContentVisible ? '►' : '▼'; 
+        }
     });
 });
 
-// Dynamically adjust sizes based on window size
+// Dynamically adjust sizes - window size
 function adjustSizes() {
     const introText = document.querySelector('.intro-text');
     const projectBoxes = document.querySelectorAll('.project-box');
 
-    // Dynamically adjust the font size and padding
+    // Dynamically adjust the font size & padding
     const screenWidth = window.innerWidth;
-    const fontSize = Math.max(16, screenWidth * 0.02); // Minimum font size of 16px
+    const fontSize = Math.max(16, screenWidth * 0.02); // Min font size - 16px
     introText.style.fontSize = fontSize + 'px';
 
-    // Set dynamic width for project boxes based on screen size
+    // Dynamic adjust width for project - screen size
     projectBoxes.forEach(box => {
         if (screenWidth > 768) {
-            box.style.flex = '1 1 calc(33% - 2vw)'; // Three columns on larger screens
+            box.style.flex = '1 1 calc(33% - 2vw)'; // Columns on larger screens - 3
         } else {
-            box.style.flex = '1 1 100%'; // Stack on smaller screens
+            box.style.flex = '1 1 100%'; // Stack for smaller screens
         }
     });
 }
@@ -50,10 +70,10 @@ adjustSizes();
 // Adjust sizes on window resize
 window.addEventListener('resize', adjustSizes);
 
-// Add the mobile menu button event listener
-document.querySelector('.menu-btn').addEventListener('click', function() {
-    const menuContent = document.querySelector('.dropdown-content');
-    
+//  mobile menu button event listener
+document.querySelector('.menu-btn').addEventListener('click', function () {
+    const menuContent = document.querySelector('.mobile-menu-content');
+
     // Toggle menu visibility
     if (menuContent.style.display === 'block') {
         menuContent.style.display = 'none';
