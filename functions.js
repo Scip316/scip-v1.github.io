@@ -1,6 +1,6 @@
 const dropdownTitles = document.querySelectorAll('.dropdown-title, .cert-title');
 
-// Add click event listeners to each dropdown title and certification title
+// Event Listern for the drop down
 dropdownTitles.forEach(title => {
     title.addEventListener('click', function() {
         const content = this.nextElementSibling; // Get the associated content
@@ -16,7 +16,7 @@ dropdownTitles.forEach(title => {
     });
 });
 
-// Mobile menu toggle
+// Mobile menu
 document.querySelector('.menu-btn').addEventListener('click', function() {
     const menuContent = document.querySelector('.dropdown-content');
     
