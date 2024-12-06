@@ -209,6 +209,14 @@ body, html {
 }
 
 /* Certificate Section */
+
+/* Cert Section Separators --- */
+.cert-separator {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 15px 0;
+}
+
 .dropdown-content {
   display: none; /* Hide dropdown by default */
 }
@@ -243,6 +251,33 @@ th, td {
 th {
   background-color: #f4f4f4; /* Header background color */
 }
+
+/* For light theme */
+@media (prefers-color-scheme: light) {
+  .dropdown-content {
+    background-color: #f9f9f9; /* Light background */
+    color: black; /* Text color for light theme */
+  }
+
+  .dropdown-content th {
+    background-color: #f4f4f4; /* Light background for header */
+    color: black; /* Text color for header */
+  }
+}
+
+/* For dark theme */
+@media (prefers-color-scheme: dark) {
+  .dropdown-content {
+    background-color: #333333; /* Dark background for dropdowns */
+    color: white; /* Text color for dark theme */
+  }
+
+  .dropdown-content th {
+    background-color: #444444; /* Dark background for header */
+    color: white; /* Text color for header */
+  }
+}
+
 
 /* Dropdown hover effect */
 .dropdown-title:hover {
