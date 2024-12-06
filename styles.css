@@ -37,7 +37,7 @@ body, html {
 
 /* Centered Links */
 .navbar-links {
-  flex-grow: 1; /*  links take up available space */
+  flex-grow: 1; /* links take up available space */
   display: flex;
   justify-content: center; /* Center links */
 }
@@ -102,9 +102,10 @@ body, html {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px; /* Add padding for better spacing */
-  background-color: #f8f8f8; /* Light gray background white theme */
-  color: black; /* Default text color white theme */
-  border-radius: 8px; /* Round the corners */
+  background-color: transparent; /* Inherit theme color */
+  color: inherit; /* Match OS theme */
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Dark theme styles for sections */
@@ -153,61 +154,69 @@ body, html {
 
 /* Dynamic container columns */
 .project-container {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-background-color: transparent; /* Set transparent to inherit the background */
-padding: 10px;
-transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: transparent; /* Set transparent to inherit the background */
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 @media (prefers-color-scheme: dark) {
-.project-container {
-    background-color: #1f1f1f; /* Dark mode background */
-    color: white;
-}
+  .project-container {
+      background-color: #1f1f1f; /* Dark mode background */
+      color: white;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-.project-container {
-    background-color: #f9f9f9; /* Light mode background */
-    color: black;
-}
+  .project-container {
+      background-color: #f9f9f9; /* Light mode background */
+      color: black;
+  }
 }
 
 .project-box {
-flex: 1 1 30%; /* Each project takes up 30% width */
-margin: 10px;
-padding: 20px;
-background-color: transparent; /* Reflect OS background by default */
-text-align: center;
-transition: background-color 0.3s, color 0.3s;
-border: 1px solid rgba(255, 255, 255, 0.2); /* Optional subtle border */
+  flex: 1 1 30%; /* Each project takes up 30% width */
+  margin: 10px;
+  padding: 20px;
+  background-color: transparent; /* Reflect OS background by default */
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional subtle border */
 }
 
 /* Red hover effect */
 .project-box:hover {
-background-color: red;
-color: white;
+  background-color: red;
+  color: white;
 }
 
 @media (prefers-color-scheme: light) {
-.project-box {
-    background-color: #f4f4f4; /* Light theme default */
-    color: #333;
-}
+  .project-box {
+      background-color: #f4f4f4; /* Light theme default */
+      color: #333;
+  }
 }
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-.project-box {
-    background-color: #1f1f1f; /* Dark theme default */
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Optional darker border */
-}
+  .project-box {
+      background-color: #1f1f1f; /* Dark theme default */
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.1); /* Optional darker border */
+  }
 }
 
 /* Certificate Section */
+
+/* Cert Section Separators --- */
+.cert-separator {
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 15px 0;
+}
+
 .dropdown-content {
   display: none; /* Hide dropdown by default */
 }
@@ -243,16 +252,38 @@ th {
   background-color: #f4f4f4; /* Header background color */
 }
 
+/* For light theme */
+@media (prefers-color-scheme: light) {
+  .dropdown-content {
+    background-color: #f9f9f9; /* Light background */
+    color: black; /* Text color for light theme */
+  }
+
+  .dropdown-content th {
+    background-color: #f4f4f4; /* Light background for header */
+    color: black; /* Text color for header */
+  }
+}
+
+/* For dark theme */
+@media (prefers-color-scheme: dark) {
+  .dropdown-content {
+    background-color: #333333; /* Dark background for dropdowns */
+    color: white; /* Text color for dark theme */
+  }
+
+  .dropdown-content th {
+    background-color: #444444; /* Dark background for header */
+    color: white; /* Text color for header */
+  }
+}
+
+
 /* Dropdown hover effect */
 .dropdown-title:hover {
   color: red; /* color on hover */
 }
 
-/*  show dropdown content */
-.dropdown-content {
-  padding: 10px;
-  background-color: #f9f9f9; /* Background color for dropdown */
-}
 
 /* Contact section */
 .contact {
