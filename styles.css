@@ -1,253 +1,288 @@
 /* Global styles */
 body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    transition: background-color 0.5s, color 0.5s;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 /* System Theme */
 @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212;
-        color: #fff;
-    }
-    .navbar, .contact {
-        background-color: #1f1f1f;
-    }
+  body {
+      background-color: #121212;
+      color: #fff;
+  }
+  .navbar, .contact {
+      background-color: #1f1f1f;
+  }
 }
 
 /* Sticky Navbar */
 .navbar {
-    position: sticky;
-    top: 0;
-    background-color: #333;
-    padding: 1rem;
-    text-align: center;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
+  position: sticky;
+  top: 0;
+  background-color: #333;
+  padding: 1rem;
+  text-align: center;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-title {
-    color: white;
-    margin-right: auto; /* links to the center */
-    font-size: 1.5rem; /* Adjust font size */
+  color: white;
+  margin-right: auto; /* links to the center */
+  font-size: 1.5rem; /* Adjust font size */
 }
 
 /* Centered Links */
 .navbar-links {
-    flex-grow: 1; /*  links take up available space */
-    display: flex;
-    justify-content: center; /* Center links */
+  flex-grow: 1; /*  links take up available space */
+  display: flex;
+  justify-content: center; /* Center links */
 }
 
 .navbar a {
-    color: white;
-    padding: 14px 20px;
-    font-size: 1.2rem; /* Larger font */
-    text-decoration: none;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    transition: color 0.3s, font-size 0.3s;
+  color: white;
+  padding: 14px 20px;
+  font-size: 1.2rem; /* Larger font */
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, font-size 0.3s;
 }
 
 .navbar a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: red;
-    transition: width 0.3s;
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: width 0.3s;
 }
 
 .navbar a:hover::before {
-    width: 100%; /* Left to right highlight effect */
+  width: 100%; /* Left to right highlight effect */
 }
 
 .navbar a:hover {
-    color: red;
+  color: red;
 }
 
 /* Intro section with GIF TODO */
 .intro {
-    min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: url('images/eating_ramen.png') no-repeat center center/cover; 
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('images/eating_ramen.png') no-repeat center center/cover; 
 }
 
 .intro-text {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
 }
 
 /* Section Separators --- */
 .section-separator {
-    border: none;
-    border-top: 2px solid #ccc;
-    margin: 50px 0;
+  border: none;
+  border-top: 2px solid #ccc;
+  margin: 50px 0;
 }
 
 /* Dropdown Sections */
 .section {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px; /* Add padding for better spacing */
-    background-color: #f8f8f8; /* Light gray background white theme */
-    color: black; /* Default text color white theme */
-    border-radius: 8px; /* Round the corners */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; /* Add padding for better spacing */
+  background-color: #f8f8f8; /* Light gray background white theme */
+  color: black; /* Default text color white theme */
+  border-radius: 8px; /* Round the corners */
 }
 
 /* Dark theme styles for sections */
 @media (prefers-color-scheme: dark) {
-    .section {
-        background-color: #1e1e1e; /* Dark background */
-        color: white; /* Text color for dark theme */
-    }
+  .section {
+      background-color: #1e1e1e; /* Dark background */
+      color: white; /* Text color for dark theme */
+  }
 }
 
 /* Dropdown title styles */
 .dropdown-title {
-    text-transform: uppercase;
-    padding: 15px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    justify-content: flex-start; /* Align to the left */
-    align-items: center;
-    transition: color 0.3s;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  align-items: center;
+  transition: color 0.3s;
 }
 
 /* Red hover effect */
 .dropdown-title:hover {
-    color: red;
+  color: red;
 }
 
 .arrow {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
 /* Accordion content */
 .dropdown-content {
-    display: none;
-    padding: 10px;
-    border-top: none;
-    background-color: #f9f9f9; /* Light background for dropdown */
+  display: none;
+  padding: 10px;
+  border-top: none;
+  background-color: #f9f9f9; /* Light background for dropdown */
 }
 
 /* Dark theme for dropdown content */
 @media (prefers-color-scheme: dark) {
-    .dropdown-content {
-        background-color: #333333; /* Dark background for dropdowns */
-    }
+  .dropdown-content {
+      background-color: #333333; /* Dark background for dropdowns */
+  }
 }
 
 /* Dynamic container columns */
 .project-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+background-color: transparent; /* Set transparent to inherit the background */
+padding: 10px;
+transition: background-color 0.3s, color 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+.project-container {
+    background-color: #1f1f1f; /* Dark mode background */
+    color: white;
+}
+}
+
+@media (prefers-color-scheme: light) {
+.project-container {
+    background-color: #f9f9f9; /* Light mode background */
+    color: black;
+}
 }
 
 .project-box {
-    flex: 1 1 30%; /* Container 30% width */
-    margin: 10px;
-    padding: 20px;
-    background-color: #f4f4f4; /* Light gray boxes */
-    text-align: center;
-    transition: background-color 0.3s;
+flex: 1 1 30%; /* Each project takes up 30% width */
+margin: 10px;
+padding: 20px;
+background-color: transparent; /* Reflect OS background by default */
+text-align: center;
+transition: background-color 0.3s, color 0.3s;
+border: 1px solid rgba(255, 255, 255, 0.2); /* Optional subtle border */
 }
 
+/* Red hover effect */
 .project-box:hover {
-    background-color: red;
-    color: white;
+background-color: red;
+color: white;
+}
+
+@media (prefers-color-scheme: light) {
+.project-box {
+    background-color: #f4f4f4; /* Light theme default */
+    color: #333;
+}
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+.project-box {
+    background-color: #1f1f1f; /* Dark theme default */
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Optional darker border */
+}
 }
 
 /* Certificate Section */
 .dropdown-content {
-    display: none; /* Hide dropdown by default */
+  display: none; /* Hide dropdown by default */
 }
 
 .smaller-dropdown.dropdown-title {
-    font-size: 1.3rem; /* Adjust font - smaller */
+  font-size: 1.3rem; /* Adjust font - smaller */
 }
 
 .dropdown-title {
-    cursor: pointer;
-    padding: 15px;
-    font-size: 1.5rem;
-    transition: color 0.3s;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 1.5rem;
+  transition: color 0.3s;
 }
 
 /* Table */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
 }
 
 table, th, td {
-    border: 1px solid #ccc; /* Border style */
+  border: 1px solid #ccc; /* Border style */
 }
 
 th, td {
-    padding: 8px;
-    text-align: left;
+  padding: 8px;
+  text-align: left;
 }
 
 th {
-    background-color: #f4f4f4; /* Header background color */
+  background-color: #f4f4f4; /* Header background color */
 }
 
 /* Dropdown hover effect */
 .dropdown-title:hover {
-    color: red; /* color on hover */
+  color: red; /* color on hover */
 }
 
 /*  show dropdown content */
 .dropdown-content {
-    padding: 10px;
-    background-color: #f9f9f9; /* Background color for dropdown */
+  padding: 10px;
+  background-color: #f9f9f9; /* Background color for dropdown */
 }
 
 /* Contact section */
 .contact {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
 }
 
 .contact a {
-    color: white;
-    margin: 10px;
-    font-size: 1.5rem;
+  color: white;
+  margin: 10px;
+  font-size: 1.5rem;
 }
 
 .contact a:hover {
-    color: #ddd;
+  color: #ddd;
 }
 
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
 }
 
 .fa:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .fa-whatsapp { background: #25D366; color: white; }
@@ -257,76 +292,76 @@ th {
 
 /* Style for mobile menu */
 .mobile-menu {
-    display: none;
-    background-color: grey;
-    padding: 10px;
-    position: relative;
+  display: none;
+  background-color: grey;
+  padding: 10px;
+  position: relative;
 }
 
 .mobile-menu .menu-btn {
-    background-color: transparent;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .mobile-menu .dropdown-content {
-    display: none;
-    background-color: grey;
-    padding: 10px;
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 100%;
+  display: none;
+  background-color: grey;
+  padding: 10px;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
 }
 
 .mobile-menu .dropdown-content a {
-    display: block;
-    color: white;
-    padding: 8px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
 }
 
 .mobile-menu .dropdown-content a:hover {
-    background-color: darkgrey;
+  background-color: darkgrey;
 }
 
 /* screen < 768px (mobile device) */
 @media screen and (max-width: 768px) {
-    /* Hide PC navbar and show mobile menu */
-    .navbar {
-        display: none;
-    }
+  /* Hide PC navbar and show mobile menu */
+  .navbar {
+      display: none;
+  }
 
-    .mobile-menu {
-        display: block;
-    }
+  .mobile-menu {
+      display: block;
+  }
 
-    .intro-text {
-        font-size: 18px;
-        text-align: center;
-    }
+  .intro-text {
+      font-size: 18px;
+      text-align: center;
+  }
 
-    /* avoid overlap sections */
-    .section {
-        margin: 20px 0;
-    }
+  /* avoid overlap sections */
+  .section {
+      margin: 20px 0;
+  }
 
-    /* Scale down project boxes */
-    .project-container {
-        display: block;
-        width: 100%;
-    }
+  /* Scale down project boxes */
+  .project-container {
+      display: block;
+      width: 100%;
+  }
 
-    .project-box {
-        flex: 1 1 100%;
-        margin-bottom: 10px;
-    }
+  .project-box {
+      flex: 1 1 100%;
+      margin-bottom: 10px;
+  }
 
-    /* Contact section scaling */
-    .contact {
-        padding: 20px;
-        font-size: 16px;
-        text-align: center;
-    }
+  /* Contact section scaling */
+  .contact {
+      padding: 20px;
+      font-size: 16px;
+      text-align: center;
+  }
 }
