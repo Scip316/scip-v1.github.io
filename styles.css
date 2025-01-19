@@ -288,7 +288,7 @@ th {
 /* Contact section */
 .contact {
   text-align: center;
-  padding: 1rem;
+  padding: 5px;
   background-color: #333;
   color: white;
 }
@@ -299,8 +299,13 @@ th {
   font-size: 1.5rem;
 }
 
-.contact a:hover {
-  color: #ddd;
+ion-icon {
+  font-size: 5vw; /* Responsive size */
+  font-size: clamp(20px, 5vw, 50px); /* Min 20px, preferred 5vw, max 50px */
+}
+
+a:hover ion-icon {
+  color: red; /* Change color on hover */
 }
 
 .fa {
